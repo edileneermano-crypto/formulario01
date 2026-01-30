@@ -1,0 +1,136 @@
+/* (*): é  CSS reset, serve para que osistema fique igual 
+em todos os navegadores.  É tipo seletor geral para "zerar" o jogo.*/
+
+* {
+  box-sizing: border-box; /* Ajusta como o tamanho das caixas é calculado (box-sizing: Dimensionamento da caixa - border-box: caixa de borda*/
+  font-family: Arial, sans-serif; /* Modelo da fonte (familia da fonte)*/
+  margin: 0; /* Remove espaços externos de todos os elementos (margem)*/
+  padding: 0; /* Remove espaços internos de todos os elementos (preenchimento)*/
+}
+
+body {
+  /* Seleciona o elemento <body>, que engloba todo o conteúdo visível da página (corpo)*/
+  background: rgb(
+    178,
+    175,
+    252
+  ); /* Define a cor de fundo de toda a página como violeta (fundo) */
+}
+
+main {
+  /* Seleciona a tag <main>, geralmente usada para o conteúdo principal do site (principal)*/
+
+  min-height: 100vh; /* Define a altura mínima do elemento como 100% da altura da "viewport" (tela do navegador). 
+     Isso garante que o conteúdo ocupe a tela inteira, mesmo que tenha pouco texto. (altura minima) (100vh: 100% da altura da janela de visualização - viewport height) */
+  display: flex; /* Ativa o modelo de layout Flexbox, que facilita o alinhamento de elementos filhos (exibir como flexivel) */
+  align-content: center; /* Alinha as "linhas" de conteúdo no centro (útil se houver quebra de linha no flex) (alinhar o conteúdo) */
+  justify-content: center; /* Alinha os itens horizontalmente no centro do eixo principal (ajustar/justificar o conteúdo (eixo principal)) */
+  align-items: center; /* Alinha os itens verticalmente no centro do eixo transversal alinhar os itens (eixo transversal)) */
+}
+
+form {
+  /* Seleciona o elemento <form> para estilizar o quadro onde ficam os campos */
+  background: #fff; /* Define a cor de fundo como branco (usando o código hexadecimal #fff) */
+  padding: 25px; /* Cria um espaçamento interno de 25px entre as bordas do form e o conteúdo (inputs, botões) */
+  width: 100%; /* Faz com que o formulário tente ocupar 100% da largura disponível do elemento pai (largura)*/
+  max-width: 360px; /* Define um limite máximo de largura (360px). Isso impede que o formulário 
+     fique esticado demais em telas grandes, mantendo um visual elegante. (largura máxima) */
+  border-radius: 8px; /* Arredonda os cantos do formulário em 8px, deixando o design mais moderno (raio da borda (arredondamento)) */
+  display: flex; /* Ativa o Flexbox para organizar os elementos internos do formulário */
+  flex-direction: column; /* Empilha os elementos um abaixo do outro (em coluna) (direção do fluxo flexível) */
+  gap: 15px; /* Cria um espaçamento automático de 15px entre cada elemento filho (entre cada input/botão) (lacuna / intervalo (espaço entre itens)) */
+}
+
+/* Títulos e Estrutura dos Campos */
+
+h2 {
+  /* Seleciona o título de nível 2 */
+  text-align: center; /* Alinha o texto do título no centro do formulário (alinhamento do texto) */
+}
+
+.campo {
+  /* Seleciona a classe .campo (provavelmente uma <div> que envolve o label e o input) */
+  display: flex; /* Ativa o flexbox para organizar o label e o input */
+  flex-direction: column; /* Coloca o label acima do input (em coluna) */
+  gap: 4px; /* Cria um espaço pequeno de 4px entre o label e o input */
+}
+
+/* Estilização dos Inputs (Campos de Texto) */
+
+input {
+  /* Estilo padrão para todos os campos de entrada (<input>) */
+  padding: 10px; /* Espaço interno para o texto não encostar nas bordas */
+  font-size: 14px; /* Define o tamanho da fonte digitada (tamanho da fonte) */
+  border-radius: 4px; /* Arredonda levemente os cantos do campo */
+  border: 1px solid #ccc; /* Define uma borda fina e cinza clara para um visual limpo */
+}
+
+input:focus {
+  /* Estado de foco: quando o usuário clica ou seleciona o campo para digitar */
+  outline: none; /* Remove aquela linha de contorno padrão (e muitas vezes feia) dos navegadores (contorno (linha externa à borda)) */
+  border-color: #4a90e2; /* Muda a cor da borda para um azul específico ao selecionar o campo (cor da borda) */
+}
+
+input.erro {
+  /* Classe específica para quando houver erro de validação */
+  border: 2px solid red; /* Aplica uma borda vermelha mais grossa para chamar a atenção para o erro */
+}
+
+small {
+  /* Estiliza as mensagens de ajuda ou erro (tag <small>) */
+  color: red; /* Define a cor do texto como vermelho */
+  font-size: 12px; /* Diminui o tamanho da fonte para ficar secundário ao input */
+}
+
+/* Estilização do Botão */
+
+button {
+  /* Estilo principal do botão de envio */
+  padding: 12px; /* Espaçamento interno para deixar o botão mais robusto */
+  background: #4a90e2; /* Define a cor de fundo (mesmo azul do foco do input) */
+  color: #fff; /* Define a cor do texto do botão como branco */
+  border: none; /* Remove a borda padrão do navegador */
+  border-radius: 4px; /* Arredonda os cantos, seguindo o padrão do input */
+  cursor: pointer; /* Muda o cursor para "mãozinha" ao passar o mouse, indicando que é clicável */
+}
+
+button:hover {
+  /* Estado de hover: quando o usuário passa o mouse sobre o botão */
+  background: #357abd; /* Escurece levemente o tom de azul para dar feedback visual de interação */
+}
+
+/* Propriedades e Valores Comuns
+
+box-sizing: dimensionamento da caixa
+border-box: caixa de borda (inclui preenchimento e borda no tamanho total)
+font-family: família da fonte
+margin: margem (espaço externo)
+padding: preenchimento (espaço interno)
+background: fundo
+min-height: altura mínima
+100vh: 100% da altura da janela de visualização (viewport height)
+display: flex: exibir como flexível (modelo de layout)
+align-content: alinhar o conteúdo
+justify-content: ajustar/justificar o conteúdo (eixo principal)
+align-items: alinhar os itens (eixo transversal)
+center: centro / centralizar
+width: largura
+max-width: largura máxima
+border-radius: raio da borda (arredondamento)
+flex-direction: direção do fluxo flexível
+column: coluna
+gap: lacuna / intervalo (espaço entre itens)
+text-align: alinhamento do texto
+font-size: tamanho da fonte
+border: borda
+solid: sólida (linha contínua)
+outline: contorno (linha externa à borda)
+none: nenhum / nulo
+border-color: cor da borda
+color: cor (geralmente usada para a cor do texto)
+cursor: ponteiro do mouse
+pointer: ponteiro (ícone de "mãozinha")
+Estados e Seletores (Pseudo-classes)
+focus: foco (quando o campo está selecionado/clicado)
+hover: pairar (quando o mouse está em cima do elemento)
+erro: embora esteja no CSS, aqui é o nome de uma classe que você criou (em português mesmo). */

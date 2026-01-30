@@ -1,0 +1,149 @@
+<!doctype html>
+<!-- Define o tipo do documento como HTML5 -->
+
+<html lang="pt-BR">
+  <!-- lang define o idioma principal da página (português do Brasil) -->
+
+  <head>
+    <!-- head contém informações invisíveis para o usuário,
+     mas essenciais para o navegador -->
+
+    <meta charset="UTF-8" />
+    <!-- charset define o conjunto de caracteres (acentos, ç, etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport garante que o site funcione bem em celular e desktop -->
+
+    <title>Cadastro</title>
+    <!-- title é o título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- link conecta o arquivo CSS externo ao HTML -->
+  </head>
+
+  <body>
+    <!-- body contém tudo o que aparece visualmente na página -->
+
+    <!-- main nada mais é que o conteúdo principal, 
+     é um agrupamento do foco, faz parte do HTML semantico -->
+    <main>
+      <!-- (CAIXA DE CORREIO) form é uma ferramenta que permite ao usuário enviar dados do 
+       navegador para o seu código (servidor) -->
+
+      <!-- id é unico, igual CPF, deve existir apenas um com o mesmo nome -->
+
+      <form id="form">
+        <!-- form agrupa todos os campos que serão enviados -->
+
+        <h2>Cadastro</h2>
+        <!-- h2 é um título de nível 2 -->
+
+        <!-- a class serve para conversar com outros elementos ao mesmo 
+         tempo, como um grupo de WhatsApp (usada muito no CSS e JS) -->
+
+        <!-- NOME COMPLETO -->
+
+        <div class="campo">
+          <!-- div é um contêiner, serve para agrupar elementos -->
+
+          <!-- label identifica o campo para o usuário 
+           e conecta o texto ao input -->
+          <label for="nome">Nome Completo</label>
+
+          <!-- input é o campo de entrada de dados -->
+          <input
+            type="text"
+            id="nome"
+            name="usuario_nome"
+            placeholder="Digite seu nome"
+          />
+          <!-- placeholder é o texto de ajuda dentro do campo -->
+
+          <!-- small mostra mensagens de erro ou orientação -->
+          <small></small>
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            name="ususario_email"
+            placeholder="Digite seu Email"
+          />
+          <small></small>
+        </div>
+
+        <!-- SENHA -->
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            name="usuario_senha"
+            id="senha"
+            placeholder="Digite sua Senha"
+          />
+          <small></small>
+        </div>
+
+        <!-- CONFIRMAÇÃO DE SENHA -->
+
+        <div class="campo">
+          <label for="Confirmar Senha">Confirmar Senha</label>
+          <!-- input usado para repetir a senha e validar se são iguais -->
+          <input
+            type="password"
+            id="confirmarSenha"
+            placeholder="Confirmar Senha"
+          />
+          <small></small>
+        </div>
+
+        <!-- button envia o formulário -->
+        <button type="submit">Cadastrar</button>
+      </form>
+    </main>
+
+    <!-- script conecta o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- ================= DICIONÁRIO (INGLÊS → PORTUGUÊS) =================
+
+doctype        → tipo do documento
+html           → estrutura principal do site
+lang           → idioma
+head           → cabeça do documento (configurações)
+meta           → metadados (informações sobre a página)
+charset        → conjunto de caracteres
+viewport       → área visível da tela
+title          → título da aba
+link           → ligação entre arquivos
+rel            → relacionamento (stylesheet = folha de estilo)
+stylesheet     → folha de estilo
+href           → referência do arquivo
+body           → corpo da página
+main           → conteúdo principal
+form           → formulário
+id             → identificador único
+class          → classe (grupo de elementos)
+label          → rótulo do campo
+for            → conecta label ao input
+input          → entrada de dados
+type           → tipo do campo
+text           → texto
+email          → email
+password       → senha
+name           → nome do campo (usado no envio)
+placeholder    → texto de exemplo
+small          → texto auxiliar
+button         → botão
+submit         → enviar
+script         → código JavaScript
+src            → origem do arquivo
+
+==================================================== -->
